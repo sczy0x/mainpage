@@ -1,70 +1,750 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Coming Soon</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap">
+  <meta charset="UTF-8">
+  <title>Gonzo VPN</title>
+  <div class="container">
+    <img src="https://cdn.discordapp.com/attachments/1085955747227123786/1118570252071088198/Untitled_design_5.png" class="movable-image">
+    <img src="https://cdn.discordapp.com/attachments/1085955747227123786/1118572746729857145/map.png" class="movable-map">
+    <img src="https://cdn.discordapp.com/attachments/1085955747227123786/1118934453587296357/Untitled_700_200px_700_100px_500_100px.png" class="movable-payments">
+        <img src="https://cdn.discordapp.com/attachments/1085955747227123786/1118267352082030743/rating.png" class="movable-rating">
+    <h2 class="tile-title">Over 4 locations worldwide & 6 servers</h2>
+    <p class="tile-description">We have many locations to choose from; our top-used locations are highlighted below on the map.</p>
+    <h1 class="title">Gonzo VPN</h1>
+    <p class="subtitle">Anonymously browse the web with<br>protection priced as it should be.</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1085955747227123786/1118590150490988654/Untitled_512_512px_1.png" type="image/png">
     <style>
-        body {
-            background-color: #121212;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: 'Exo 2', sans-serif;
-            cursor: url('https://cdn.discordapp.com/attachments/1085955747227123786/1115656776793194516/Dot.png'), auto; /* Replace 'custom-cursor.png' with the path to your custom cursor image */
-        }
-        
-        .blink {
-            animation: blink-animation 2s ease-in-out infinite;
-            color: white;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-        }
-        
-        .button-container {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    body {
+      background-color: #0f0f10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 500vh;
+      margin: 0;
+      font-family: 'Exo 2', Arial, sans-serif;
+      color: #ffffff;
+      cursor: url('https://cdn.discordapp.com/attachments/1085955747227123786/1117058428477636639/Dot.png'), auto;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-        .discord-button,
-        .website-button {
-            margin: 5px; /* Adjust the margin value as needed */
-        }
+    .container {
+      position: relative;
 
-        .discord-button img,
-        .website-button img {
-            width: 40px;
-            height: 40px;
-        }
-        
-        @keyframes blink-animation {
-            0% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-    </style>
+    }
+
+    .movable-image {
+      position: absolute;
+      top: -115%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      cursor: move;
+    }
+    
+    .movable-map {
+      position: absolute;
+      bottom: -40%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      cursor: move;
+      resize: both;
+      overflow: auto;
+      width: 50%; /* Adjust the width as desired */
+    }
+    
+      .movable-payments {
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      cursor: move;
+      resize: both;
+      overflow: auto;
+      width: 50%; /* Adjust the width as desired */
+    }
+    
+      .movable-rating {
+      position: absolute;
+      top: -100%;
+      left: 4%;
+      transform: translate(-50%, 50%);
+      cursor: move;
+      resize: both;
+      overflow: auto;
+      width: 50%; /* Adjust the width as desired */
+      max-width: 90px; /* Set the maximum width of the image */
+      max-height: 17px; /* Set the maximum height of the image */
+      aspect-ratio: 3/2; /* Set the desired aspect ratio (width/height) */
+}
+
+.title {
+  font-size: 70px;
+  position: absolute;
+  top: -1500px; /* Adjust the value as needed */
+  left: 200px; /* Adjust the value as needed */
+  transform: translateX(-50%);
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px; /* Adjust the font size as needed */
+  color: #ffffff;
+  left: 15px; /* Adjust the value as needed */
+  position: relative;
+  top: -1430px; /* Adjust the value to move the subtitle up or down */
+}
+
+.tile-title {
+  font-size: 39px;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Exo 2', Arial, sans-serif;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.tile-description {
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Exo 2', Arial, sans-serif;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #0f0f10;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Ensures the top bar is on top of other elements */
+}
+
+.text-button {
+  position: relative;
+  margin: 0 5px;
+  padding: 0 5px;
+  font-size: 18px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.top-bar .text-button:last-child {
+  margin-right: 0;
+  padding-right: 20px; /* Added 'px' unit to the padding value */
+}
+
+.top-bar .bullet {
+  font-size: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -20px;
+}
+
+.box {
+  width: 450px;
+  height: 200px;
+  border: 4px solid #000001;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #0f0f10;
+  font-family: 'Exo 2', Arial, sans-serif;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -700px; /* Adjust the value as needed */
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background-color: #000001;
+}
+
+.box p {
+  margin: 0;
+  text-align: left;
+  color: #ffffff;
+}
+
+.box img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.box-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Increase the margin-bottom value for spacing */
+  text-align: left;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0 0 30px 0;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+.explore-button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #0f0f10;
+  color: #ffffff;
+  border: 2px solid #000001;
+  border-radius: 50px; /* Adjust the value to control the roundness of the border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  top: -1870px; /* Adjust the value as needed */
+  left: -42%;
+}
+
+.explore-button:hover {
+  background-color: #000001;
+  color: #ffffff;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -350px; /* Adjust the value as needed */
+}
+
+.bottom-box {
+  width: 300px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid white; /* Add border property */
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.per-month {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.box-content .information {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.box-content .information ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.box-content .information li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.buy-now-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #d61f1f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #000001;
+}
+
+.row.bottom-row {
+  justify-content: center;
+}
+
+
+.contact-title {
+  font-size: 32px;
+  position: absolute;
+  top: 2400px; /* Adjust the value as needed */
+  left: 20px; /* Adjust the value as needed */
+  transform: translateX(-50%);
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Contact Information */
+.contact-info {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact-info {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom:   20px;
+  color: #ffffff;
+  position: absolute;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.discord-info {
+  top: 2500px; /* Adjust the value as needed */
+  left: -130px; /* Adjust the value as needed */
+}
+
+.email-info {
+  top: 2600px; /* Adjust the value as needed */
+  left: -130px; /* Adjust the value as needed */
+}
+
+.instagram-info {
+  top: 2700px; /* Adjust the value as needed */
+  left: -130px; /* Adjust the value as needed */
+}
+
+.support-info {
+  position: relative;;
+  top: 1515px; /* Adjust the value as needed */
+  right: -990px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.support-title {
+  position: absolute;
+  top: 2400px; /* Adjust the value as needed */
+  right: 200px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.aboutus-title {
+  position: absolute;
+  top: 2570px; /* Adjust the value as needed */
+  right: 340px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 32px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.aboutus-info {
+  position: relative;;
+  top: 1625px; /* Adjust the value as needed */
+  left: 990px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.features-title {
+  position: absolute;
+  top: -900px; /* Adjust the value as needed */
+  left: 30px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 50px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.features-info {
+  position: relative;;
+  top: 90px; /* Adjust the value as needed */
+  left: 0px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.rating-title {
+  position: absolute;
+  top: -424px; /* Adjust the value as needed */
+  left: 80px; /* Adjust the value as needed */
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 20px;
+  white-space: nowrap; /* Prevent line breaks within the text */
+}
+
+.weaccept-title {
+  position: relative;;
+  top: 1950px; /* Adjust the value as needed */
+  left: 565px; /* Adjust the value as needed */
+  text-align: centre;
+  font-size: 18px;
+  font-family: 'Exo 2', Arial, sans-serif;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-box {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #000001;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid black; /* Add border property */
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background-color: #000001;
+}
+
+
+.bottom-box:nth-child(1) {
+  background-color: #0f0f10;
+  width: 390px;
+  height: 490px;
+  border: 2px solid black; /* Add border property */
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px;
+}
+
+.bottom-box:nth-child(2) {
+  background-color: #0f0f10;
+  width: 390px;
+  height: 490px;
+  border: 2px solid black; /* Add border property */
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px;
+}
+
+.bottom-box:nth-child(3) {
+  background-color: #0f0f10;
+  width: 390px;
+  height: 490px;
+  border: 2px solid black; /* Add border property */
+  border-radius: 8px;
+  margin: 10px;
+  padding: 30px;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.per-month {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.box-content .information {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.box-content .information ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.box-content .information li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+  .buy-now-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #000001;
+    color: #ffffff;
+    border-radius: 20px; /* Adjust the border-radius value for curved corners */
+    border: 2px solid white; /* Add a white border */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+  .buy-now-button:hover {
+    background-color: #000001; /* Update the background color on hover */
+  }
+
+.row.bottom-row {
+  justify-content: center;
+}
+
+.bottom-box.editable-box:nth-last-child(-n+3) {
+  margin-right: 0;
+}
+
+  </style>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  </script>
 </head>
+
 <body>
-    <div class="blink">Coming Soon</div>
-    <div class="button-container">
-        <a class="discord-button" href="https://discord.com/invite/gonzovpn">
-            <img src="https://cdn.discordapp.com/attachments/1085955747227123786/1115602849221578843/Untitled_512_512px.png" alt="Discord">
-        </a>
-        <a class="website-button" href="https://gonzovpnstatus.xyz/">
-            <img src="https://cdn.discordapp.com/attachments/1085955747227123786/1115603905649319996/Untitled_512_512px_1.png" alt="Website">
-        </a>
+  <div class="container">
+    <div class="top-bar">
+      <a href="https://discord.gg/gonzovpn" target="_blank" class="text-button">DISCORD</a>
+      <span class="bullet">&bull;</span>
+      <a href="http://gonzovpnstatus.xyz" target="_blank" class="text-button">SERVER STATUS</a>
+      <span class="bullet">&bull;</span>
+      <a href="C:/contact.pdf" target="_blank" class="text-button">CONTACT US</a>
+      <span class="bullet">&bull;</span>
+      <a href="C:/pricing.pdf" target="_blank" class="text-button">PRICING</a>
     </div>
-</body>
-</html>
+    <div class="row">
+      <div class="box">
+        <h2>Regain your privacy.</h2>
+        <p>We don't require any personal information apart from the payment method you've used. We have a zero log policy and ensure full privacy.</p>
+      </div>
+      <div class="box">
+        <h2>Stay boosted.</h2>
+        <p>GonzoVPN only offers locations with 10gbps uplinks, these port speeds make sure you're browsing/gaming at incredible speeds with a secured connection.</p>
+      </div>
+      <div class="box">
+        <h2>Step up your game.</h2>
+        <p>Stay connected while gaming with our low latency game servers. Enjoy your games while being protected with enterprise-grade protection!</p>
+      </div>
+    </div>
+       <div class="row">
+      <div class="box">
+        <h2>BPF Filters.</h2>
+        <p>Using this technology, we're able to isolate legitimate traffic from malicious traffic while all users stay connected to our services.</p>
+      </div>
+      <div class="box">
+        <h2>Stateful Mitigation.</h2>
+        <p>Our servers are protected by Paths stateful mitigation, with over 10tbps of network capacity it is able to mitigate almost any attack with ease.</p>
+      </div>
+      <div class="box">
+        <h2>Edge Firewall.</h2>
+        <p>Our edge firewall protects against various types of attacks including DDoS attacks, ensuring a secure and reliable connection for our users.</p>
+      </div>
+    </div>
+    <div class="row">
+      <a href="#" class="text-button explore-button">Explore</a>
+      <a href="#" class="text-button explore-button">Explore Plans</a>
+    </div>
+<div class="bottom-row">
+  <div class="bottom-box editable-box">
+    <div class="box-content">
+      <h2 class="editable-text">Lite Plan</h2>
+      <div class="price editable-text">$3.00<span class="per-month">/month</span></div>
+      <div class="information">
+        <ul>
+          <li>Server Locations: <span class="editable-text">1</span></li>
+          <li>Simultaneous Connections: <span class="editable-text">Unlimited</span></li>
+          <li>Traffic: Unlimited</li>
+          <li>Support: Basic</li>
+        </ul>
+      </div>
+      <a href="https://discord.gg/gonzovpn" class="buy-now-button">Get Started</a>
+    </div>
+  </div>
+
+  <div class="bottom-box editable-box">
+    <div class="box-content">
+      <h2 class="editable-text">Gonzo Plan</h2>
+      <div class="price editable-text">$4.00<span class="per-month">/month</span></div>
+      <div class="information">
+        <ul>
+          <li>Server Locations: <span class="editable-text">All VPN Servers</span></li>
+          <li>Simultaneous Connections: <span class="editable-text">Unlimited</span></li>
+          <li>Traffic: Unlimited</li>
+          <li>Support: Priority</li>
+        </ul>
+      </div>
+      <a href="https://discord.gg/gonzovpn" class="buy-now-button">Get Started</a>
+    </div>
+  </div>
+
+  <div class="bottom-box editable-box">
+    <div class="box-content">
+      <h2 class="editable-text">Reseller Plan</h2>
+      <div class="price editable-text">$20.00<span class="per-month">/month</span></div>
+      <div class="information">
+        <ul>
+          <li>Server Locations: <span class="editable-text">All VPN Servers</span></li>
+          <li>Simultaneous Connections: <span class="editable-text">Unlimited</span></li>
+          <li>Traffic: Unlimited</li>
+          <li>Support: Priority</li>
+        </ul>
+      </div>
+      <a href="https://discord.gg/gonzovpn" class="buy-now-button">Get Started</a>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="contact-title">Contact Information</h2>
+<div class="support-title">
+  <h2>Support Availability</h2>
+</div>
+<div class="support-info">
+  <p>The customer service is available 24/7<br>via E-Mail, Discord, Telegram, and Instagram.</p>
+</div>
+
+<div class="contact-info discord-info">
+  <h3>Discord</h3>
+  <p>sczy.</p>
+</div>
+<div class="contact-info email-info">
+  <h3>Email</h3>
+  <p>support@gonzovpn</p>
+</div>
+<div class="contact-info instagram-info">
+  <h3>Instagram</h3>
+  <p><a href="https://instagram.com/gonzovpn" target="_blank">https://instagram.com/gonzovpn</a></p>
+</div>
+
+<h2 class="aboutus-title">About Us</h2>
+<div class="support-title">
+  <h2>Support Availability</h2>
+</div>
+<div class="aboutus-info">
+  <p>Our service aims to provide high-quality features at an affordable price,<br>ensuring that luxury does not always come with an exorbitant price tag.<br>At Gonzo VPN, we believe superior quality should be accessible across<br>various price ranges.
+</div>
+
+<h2 class="features-title">Features</h2>
+<div class="features-title">
+<div class="features-info">
+  <p>Why choose Gonzo?
+</div>
+
+<h2 class="rating-title"></h2>
+<div class="rating-title">
+<div class="rating-info">
+  <p>5 stars on Trustpilot
+</div>
+
+<h2 class="weaccept-title"></h2>
+<div class="weaccept-title">
+  <p>WE ACCEPT...
+</div>
